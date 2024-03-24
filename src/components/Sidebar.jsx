@@ -2,6 +2,7 @@ import React from "react";
 import logo from '../assets/images/Logo.png';
 import user from '../assets/images/sample.png';
 import edit from '../assets/images/uil_edit.svg';
+import mi_user from '../assets/images/mi_users.svg';
 import { useState } from 'react';
 
 const SidebarContent = () => {
@@ -61,8 +62,8 @@ const SidebarContent = () => {
                 </div>
             </div>
         </div>
-        <div className="hover:bg-gray-300 w-64 p-2 rounded justify-start items-center gap-0 inline-flex sidebar-dropdown"> 
-            <button className="grow shrink basis-0 h-8 justify-start items-center gap-4 flex"> 
+        <div className="hover:bg-gray-300 w-64 p-2 rounded justify-start items-center gap-1.5 inline-flex sidebar-dropdown mb-[10px]"> 
+            <button className="grow shrink basis-0 h-7 justify-start items-center gap-4 flex"> 
                 <div className="w-7 h-7 relative"></div>
                 <div className="w-28 h-90 text-green-1 text-base font-bold font-helvetica flex items-center gap-[3px]" style={{ opacity: 0.7 }}>
                     <div className="ml-[-1px] mr-[4px]"> 
@@ -84,29 +85,68 @@ const SidebarContent = () => {
             </button>
             <div className="dropdown-content hidden"></div>
         </div>
-          <div className="w-64 p-2 bg-white rounded justify-between items-center inline-flex">
-            <div className="grow shrink basis-0 h-7 justify-start items-center gap-4 flex">
-              <div className="w-7 h-7 relative"></div>
-              <div className="justify-start items-center gap-2 flex">
-                <div className="w-28 h-3 text-gray-500 text-base font-bold font-helvetica">Users</div>
-              </div>
-            </div>
-            <div className="w-4 h-4 relative"></div>
-          </div>
-          <div className="w-64 p-2 bg-white rounded justify-between items-center inline-flex">
-            <div className="grow shrink basis-0 h-7 justify-start items-center gap-4 flex">
-              <div className="w-7 h-7 relative"></div>
-              <div className="justify-start items-center gap-2 flex">
-                <div className="w-28 h-3 text-gray-500 text-base font-bold font-helvetica">Pages</div>
-              </div>
-            </div>
-            <div className="w-4 h-4 relative"></div>
-          </div>
-          <div class="w-64 h-14 p-30 bg-white rounded justify-start items-center gap-4 inline-flex mt-[320px]">
-          <div class="grow shrink basis-0 h-6 justify-start items-center gap-4 flex">
-              <div class="w-6 h-6 relative"></div>
-              <div class="text-gray-500 text-base font-bold font-['Helvetica']">Log out</div>
-          </div>
+        <div className="hover:bg-gray-300 w-64 p-2 rounded justify-start items-center gap-1.5 inline-flex sidebar-dropdown mb-[10px]"> 
+            <button className="grow shrink basis-0 h-7 justify-start items-center gap-4 flex"> 
+                <div className="w-7 h-7 relative"></div>
+                <div className="w-28 h-90 text-green-1 text-base font-bold font-helvetica flex items-center gap-[3px]" style={{ opacity: 0.7 }}>
+                    <div className="ml-[-1px] mr-[4px]"> 
+                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-green-600 mb-[3px]">
+                            <g id="view-dashboard-outline">
+                                <path id="Vector" d="M11.6666 6C10.6058 6 9.58834 6.42143 8.8382 7.17157C8.08805 7.92172 7.66663 8.93913 7.66663 10C7.66663 11.0609 8.08805 12.0783 8.8382 12.8284C9.58834 13.5786 10.6058 14 11.6666 14C12.7275 14 13.7449 13.5786 14.4951 12.8284C15.2452 12.0783 15.6666 11.0609 15.6666 10C15.6666 8.93913 15.2452 7.92172 14.4951 7.17157C13.7449 6.42143 12.7275 6 11.6666 6ZM5.66663 10C5.66663 8.4087 6.29877 6.88258 7.42399 5.75736C8.5492 4.63214 10.0753 4 11.6666 4C13.2579 4 14.784 4.63214 15.9093 5.75736C17.0345 6.88258 17.6666 8.4087 17.6666 10C17.6666 11.5913 17.0345 13.1174 15.9093 14.2426C14.784 15.3679 13.2579 16 11.6666 16C10.0753 16 8.5492 15.3679 7.42399 14.2426C6.29877 13.1174 5.66663 11.5913 5.66663 10ZM18.4946 5.757C18.5875 5.66402 18.6978 5.59026 18.8192 5.53994C18.9406 5.48962 19.0707 5.46371 19.2021 5.46371C19.3335 5.46371 19.4637 5.48962 19.5851 5.53994C19.7065 5.59026 19.8168 5.66402 19.9096 5.757C20.4669 6.31416 20.9089 6.97565 21.2105 7.70366C21.5121 8.43168 21.6673 9.21198 21.6673 10C21.6673 10.788 21.5121 11.5683 21.2105 12.2963C20.9089 13.0244 20.4669 13.6858 19.9096 14.243C19.8167 14.3359 19.7064 14.4096 19.585 14.4599C19.4636 14.5102 19.3335 14.5361 19.2021 14.5361C19.0707 14.5361 18.9406 14.5102 18.8192 14.4599C18.6978 14.4096 18.5875 14.3359 18.4946 14.243C18.4017 14.1501 18.328 14.0398 18.2777 13.9184C18.2275 13.797 18.2016 13.6669 18.2016 13.5355C18.2016 13.4041 18.2275 13.274 18.2777 13.1526C18.328 13.0312 18.4017 12.9209 18.4946 12.828C19.2445 12.0779 19.6658 11.0607 19.6658 10C19.6658 8.93934 19.2445 7.92211 18.4946 7.172C18.4016 7.07913 18.3279 6.96884 18.2776 6.84744C18.2272 6.72604 18.2013 6.59592 18.2013 6.4645C18.2013 6.33308 18.2272 6.20296 18.2776 6.08156C18.3279 5.96016 18.4016 5.84987 18.4946 5.757ZM19.1966 18.757C19.2611 18.5 19.4249 18.279 19.6522 18.1427C19.8794 18.0064 20.1515 17.9659 20.4086 18.03C21.7366 18.362 22.5776 19.21 23.0606 20.178C23.5286 21.113 23.6666 22.158 23.6666 23C23.6666 23.2652 23.5613 23.5196 23.3737 23.7071C23.1862 23.8946 22.9318 24 22.6666 24C22.4014 24 22.1471 23.8946 21.9595 23.7071C21.772 23.5196 21.6666 23.2652 21.6666 23C21.6666 22.343 21.5546 21.637 21.2726 21.072C21.0056 20.539 20.5956 20.138 19.9236 19.97C19.6666 19.9055 19.4457 19.7417 19.3093 19.5144C19.173 19.2872 19.1325 19.0141 19.1966 18.757ZM8.16663 20C6.90663 20 5.66663 21.213 5.66663 23C5.66663 23.2652 5.56127 23.5196 5.37373 23.7071C5.1862 23.8946 4.93184 24 4.66663 24C4.40141 24 4.14706 23.8946 3.95952 23.7071C3.77198 23.5196 3.66663 23.2652 3.66663 23C3.66663 20.368 5.55963 18 8.16663 18H15.1666C17.7736 18 19.6666 20.368 19.6666 23C19.6666 23.2652 19.5613 23.5196 19.3737 23.7071C19.1862 23.8946 18.9318 24 18.6666 24C18.4014 24 18.1471 23.8946 17.9595 23.7071C17.772 23.5196 17.6666 23.2652 17.6666 23C17.6666 21.213 16.4266 20 15.1666 20H8.16663Z" fill="#668378"/> 
+                            </g>
+                       </svg>
+                    </div>
+                    Users
+                    <div className="ml-[95px]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="ooui:next-ltr">
+                                <path id="Vector" d="M6.29998 0.899902L5.03998 2.2499L11.7 8.9999L5.03998 15.7499L6.29998 17.0999L14.4 8.9999L6.29998 0.899902Z" fill="#668378"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </button>
+            <div className="dropdown-content hidden"></div>
+        </div>
+        <div className="hover:bg-gray-300 w-64 p-2 rounded justify-start items-center gap-1.5 inline-flex sidebar-dropdown mb-[10px]"> 
+            <button className="grow shrink basis-0 h-7 justify-start items-center gap-4 flex"> 
+                <div className="w-7 h-7 relative"></div>
+                <div className="w-28 h-90 text-green-1 text-base font-bold font-helvetica flex items-center gap-[3px]" style={{ opacity: 0.7 }}>
+                    <div className="ml-[-1px] mr-[4px]"> 
+                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-green-600 mb-[3px]">
+                            <g id="view-dashboard-outline">
+                                <path id="Vector" d="M23 12V24H21V14H7V24H5V12H23ZM23 4V10H5V4H23ZM21 6H7V8H21V6Z" fill="#668378"/> 
+                            </g>
+                       </svg>
+                    </div>
+                    Pages
+                    <div className="ml-[93px]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="ooui:next-ltr">
+                                <path id="Vector" d="M6.29998 0.899902L5.03998 2.2499L11.7 8.9999L5.03998 15.7499L6.29998 17.0999L14.4 8.9999L6.29998 0.899902Z" fill="#668378"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </button>
+            <div className="dropdown-content hidden"></div>
+        </div>
+        <div className="hover:bg-gray-300 w-64 p-2 rounded justify-start items-center gap-1.5 inline-flex sidebar-dropdown mb-[10px] mt-[290px]"> 
+            <button className="grow shrink basis-0 h-7 justify-start items-center gap-4 flex"> 
+                <div className="w-7 h-7 relative"></div>
+                <div className="w-28 h-90 text-green-1 text-base font-bold font-helvetica flex items-center gap-[3px]" style={{ opacity: 0.7 }}>
+                    <div className="mt-[5px] ml-[-1px] mr-[4px]"> 
+                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-green-600 mb-[3px]">
+                            <g id="view-dashboard-outline">
+                                <path id="Vector" d="M6 2H15C15.5304 2 16.0391 2.21071 16.4142 2.58579C16.7893 2.96086 17 3.46957 17 4V6H15V4H6V20H15V18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V4C4 3.46957 4.21071 2.96086 4.58579 2.58579C4.96086 2.21071 5.46957 2 6 2Z" fill="#668378"/> 
+                                <path id="Vector_2" d="M16.09 15.59L17.5 17L22.5 12L17.5 7L16.09 8.41L18.67 11H9V13H18.67L16.09 15.59Z" fill="#668378"/>
+                            </g>
+                       </svg>
+                    </div>
+                    Logout
+                </div>
+            </button>
+            <div className="dropdown-content hidden"></div>
         </div>
         </div>
       </div>
