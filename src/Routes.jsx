@@ -8,6 +8,11 @@ import Dashboard from "pages/Dashboard";
 import FAQs from "pages/FAQs";
 import Property from "pages/Property";
 import Admin from "pages/Admin";
+import Aboutus from "pages/Aboutus";
+import Editprofile from "pages/Editprofile";
+import AboutusEdit from "pages/AboutusEdit";
+import SecuritySettings from "pages/SecuritySettings";
+
 
 const ProjectRoutes = () => {
   let element = useRoutes([
@@ -22,8 +27,24 @@ const ProjectRoutes = () => {
       element: <Dashboard />,
     },
     {
+      path: "editprofile",
+      element: <Editprofile />,
+    },
+    {
+      path: "aboutusEdit",
+      element: <AboutusEdit />,
+    },
+    {
+      path: "securitysettings",
+      element: <SecuritySettings />,
+    },
+    {
       path: "faqs",
       element: <FAQs />,
+    },
+    {
+      path: "aboutus",
+      element: <Aboutus />,
     },
     {
       path: "property",
