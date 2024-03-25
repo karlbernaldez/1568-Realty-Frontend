@@ -7,7 +7,7 @@ export default function AboutusPage() {
   return (
     <>
       <Helmet>
-        <title>Bryan's Application1</title>
+        <title>1568 Realty</title>
         <meta name="description" content="Web site created using create-react-app" />
       </Helmet>
       <div className="flex md:flex-col items-start w-full gap-[26px] bg-gray-100">
