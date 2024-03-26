@@ -47,7 +47,7 @@ const ProjectRoutes = () => {
       element: <Aboutus />,
     },
     {
-      path: "property",
+      path: "active-listing",
       element: <Property />,
     },
     {

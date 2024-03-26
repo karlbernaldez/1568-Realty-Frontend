@@ -2,7 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Img, Text, Button, Heading } from "../../components";
 import FAQsFooter from "../../components/FAQsFooter";
-import { MenuItem, SubMenu, Menu, Sidebar } from "react-pro-sidebar";
+import { MenuItem, SubMenu, Menu } from "react-pro-sidebar";
+import SidebarContent from "../../components/Sidebar.jsx";
 
 export default function FAQsPage() {
   return (
@@ -11,109 +12,9 @@ export default function FAQsPage() {
         <title>Real State</title>
         <meta name="description" content="Web site created using create-react-app" />
       </Helmet>
-      <div className="flex md:flex-col items-start w-full pr-14 gap-6 md:pr-5 bg-gray-100_01">
-        <Sidebar
-          width="311px !important"
-          className="flex flex-col h-screen gap-10 top-0 p-6 sm:p-5 bg-white-A700 shadow-xs !sticky overflow-auto"
-        >
-          <div className="flex flex-col self-stretch mt-6 gap-[31px]">
-            <div className="flex justify-center items-center gap-2">
-              <Img src="images/img_logo.png" alt="logo_one" className="self-start object-cover" />
-              <Heading size="2xl" as="h3" className="self-end !text-gray-900_04 !font-compassserif">
-                <span className="text-lime_600">1568</span>
-                <span className="text-lime_600 tracking-[-3.08px]">&nbsp;</span>
-                <span className="text-teal-900">Realty</span>
-              </Heading>
-            </div>
-            <div className="flex justify-center items-center gap-[7px] p-[18px] bg-gray-900_04 rounded">
-              <div className="flex justify-between items-center pr-[39px] gap-5 sm:pr-5 flex-1">
-                <Img src="images/img_ellipse_5.png" alt="circleimage" className="h-[40px] w-[40px] rounded-[50%]" />
-                <div className="flex flex-col items-start">
-                  <Text size="xl" as="p" className="!text-gray-50">
-                    Nina Velasco
-                  </Text>
-                  <Text size="md" as="p" className="!text-gray-50 !font-helveticalight">
-                    Admin
-                  </Text>
-                </div>
-              </div>
-              <Img src="images/img_uil_edit.svg" alt="uiledit_one" className="h-[24px] w-[24px]" />
-            </div>
-          </div>
-          <Menu
-            menuItemStyles={{
-              button: {
-                padding: 0,
-                gap: "16px",
-                backgroundColor: "#ffffff",
-                color: "#668378",
-                fontWeight: 700,
-                fontSize: "16px",
-                borderRadius: "4px",
-                paddingLeft: "16px",
-                paddingRight: "16px",
-                [`&:hover, &.ps-active`]: { color: "#13593e", backgroundColor: "#ccd5d2 !important" },
-              },
-            }}
-            rootStyles={{ ["&>ul"]: { gap: "464px" } }}
-            renderExpandIcon={() => (
-              <Img
-                src="images/img_arrow_right.svg"
-                alt="arrowright_one"
-                className="self-end h-[18px] w-[18px] cursor-pointer"
-              />
-            )}
-            className="flex flex-col self-stretch w-full mb-[5px] pb-[50px] md:pb-5"
-          >
-            <div className="flex flex-col">
-              <MenuItem
-                icon={
-                  <Img
-                    src="images/img_view_dashboard_outline_gray_600.svg"
-                    alt="viewdashboard"
-                    className="h-[28px] w-[28px]"
-                  />
-                }
-              >
-                Dashboard
-              </MenuItem>
-              <SubMenu
-                icon={<Img src="images/img_material_symbol.svg" alt="materialsymbol" className="h-[28px] w-[28px]" />}
-                label="Property"
-              >
-                <MenuItem>Submenu Item</MenuItem>
-              </SubMenu>
-              <SubMenu
-                icon={<Img src="images/img_mi_users.svg" alt="miusers_one" className="h-[28px] w-[28px]" />}
-                label="Users"
-              >
-                <MenuItem>Submenu Item</MenuItem>
-              </SubMenu>
-              <MenuItem
-                icon={
-                  <Img
-                    src="images/img_tdesign_page_head_teal_900.svg"
-                    alt="tdesignpage_one"
-                    className="h-[28px] w-[28px]"
-                  />
-                }
-                suffix={<div className="self-end h-[18px] w-[19%] rotate-[-90deg]" />}
-              >
-                Pages
-              </MenuItem>
-              <MenuItem icon={<div className="h-[14px] w-[18%]" />}>About us</MenuItem>
-              <MenuItem icon={<div className="h-[14px] w-[25%]" />}>FAQs</MenuItem>
-            </div>
-            <div>
-              <MenuItem
-                icon={<Img src="images/img_ic_twotone_log_out.svg" alt="ictwotonelog" className="h-[24px] w-[24px]" />}
-              >
-                Log out
-              </MenuItem>
-            </div>
-          </Menu>
-        </Sidebar>
-        <div className="flex flex-col mt-[60px] gap-8 flex-1">
+      <div className="flex md:flex-col items-start w-full h-[0px] pr-14 gap-6 md:pr-5 bg-gray-100_01">
+        <SidebarContent/>
+        <div className="flex flex-col mt-[60px] gap-8 flex-1 ml-[350px]">
           <div className="flex ml-[9px] md:ml-0">
             <div className="flex flex-col items-start gap-[3px]">
               <div className="flex">
@@ -122,18 +23,11 @@ export default function FAQsPage() {
                     <span className="text-gray-900">Pages / </span>
                     <span className="text-teal-900">FAQs</span>
                   </Heading>
-                  <Heading size="xl" as="h2" className="mt-[-28px] !text-gray-900">
-                    <span className="text-gray-900">Pages / </span>
-                    <span className="text-teal-900">FAQs</span>
-                  </Heading>
                 </div>
               </div>
               <div className="flex">
                 <div className="flex flex-col">
                   <Text size="md" as="p" className="!text-gray-500_01">
-                    View and manage frequently asked questions
-                  </Text>
-                  <Text size="md" as="p" className="mt-[-14px] !text-gray-500_01">
                     View and manage frequently asked questions
                   </Text>
                 </div>
@@ -184,7 +78,7 @@ export default function FAQsPage() {
                 </Text>
               </div>
               <div className="flex flex-col gap-px rounded-bl-lg rounded-br-lg border-gray-300_01 border-l border-r border-solid bg-white-A700">
-                <div className="flex sm:flex-col justify-between items-center gap-5 p-[23px] md:p-5 border-gray-300_01 border-b border-solid flex-1">
+                <div className="flex sm:flex-col justify-between items-center gap-2 p-[23px] md:p-5 border-gray-300_01 border-b border-solid flex-1">
                   <Text as="p" className="ml-1 md:ml-0">
                     1
                   </Text>

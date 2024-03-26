@@ -80,6 +80,11 @@ const SelectBox = React.forwardRef(
               ...provided,
               margin: 0,
             }),
+            menu: (provided) => ({
+              ...provided,
+              width: "140px", // Adjust the width as needed
+              marginLeft: "-15px", // Adjust the left margin as needed
+            }),
             menuPortal: (base) => ({ ...base, zIndex: 999999 }),
           }}
           menuPortalTarget={document.body}

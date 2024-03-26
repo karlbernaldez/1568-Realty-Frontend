@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Img, Text, Button, CheckBox, Input, Heading } from "../../components";
 import { useRoutes } from "react-router-dom";
+import axios from "axios";
 
 export default function SigninPage() {
   return (
@@ -59,11 +60,10 @@ export default function SigninPage() {
                     type="email"
                     name="email"
                     id="email"
-                    className="pl-10 bg-gray-50 border border-gray-300 text-lg text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3 pl-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder=" "
+                    className="ml-[50px] mt-[18px] pl-10 bg-gray-50 border border-gray-300 text-lg text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3 pl-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Username"
                     required
                   />
-                  <span className="absolute top-7 transform -translate-y-1/2 left-11 text-gray-400 text-base">Username</span>
                 </div>
                 <div className="relative border-2 rounded-lg h-[60px]">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -84,11 +84,10 @@ export default function SigninPage() {
                     type="password"
                     name="password"
                     id="password"
-                    className="pl-10 bg-gray-50 border border-gray-300 text-lg text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3 pl-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder=" "
+                    className="ml-[50px] mt-[18px] bg-gray-50 border border-gray-300 text-lg text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-3 pr-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Password"
                     required
                   />
-                  <label htmlFor="password" className="absolute top-4 left-12 text-gray-400 text-base">Password</label>
                 </div>
                 <div className="flex justify-between gap-5">
                   <CheckBox
@@ -106,9 +105,9 @@ export default function SigninPage() {
                 </div>
                 <div className="flex flex-col items-center gap-4">
                   
-                    <Button size="sm" shape="round" className="w-full sm:px-5 !text-white-A700 font-bold">
-                      Log in
-                    </Button>
+                <Button size="sm" shape="round" className="w-full sm:px-5 !text-white-A700 font-bold">
+                  <a href="/dashboard">Log in</a>
+                </Button>
                   
                   <Text as="p" className="!text-gray-900 text-center">
                     <span className="text-gray-900">Developed by </span>

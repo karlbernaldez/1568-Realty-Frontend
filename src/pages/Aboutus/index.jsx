@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Img, Heading } from "../../components";
 import Sidebar from "../../components/Sidebar.jsx";
+import edit from "../../assets/images/bx_edit.svg";
 
 export default function AboutusPage() {
   return (
@@ -28,11 +29,17 @@ export default function AboutusPage() {
                 <Heading size="s" as="h2" className="ml-4 md:ml-0">
                   About us
                 </Heading>
-                <Img
-                  src="images/img_uil_edit_teal_900.svg"
-                  alt="uiledit_three"
-                  className="h-[24px] w-[24px] mr-4 md:mr-0"
-                />
+                <div className="flex items-center">
+                  <Img
+                    src={edit}
+                    alt="uiledit_five"
+                    className="z-10 h-[24px] w-[24px] mr-[-32px] md:mr-0"
+                  />
+                  <div className="mr-[10px] w-20 h-11 pl-3 pr-4 py-2.5 bg-amber-500 rounded justify-center items-center gap-1 inline-flex">
+                    <div className="w-6 h-6 relative"></div>
+                    <div className="ml-[20px] text-stone-50 text-base font-bold font-['Helvetica']">Edit</div>
+                  </div>
+                </div>
               </div>
               <div className="flex justify-center p-8 sm:p-5 rounded-bl rounded-br border-gray-300 border-l border-b border-r border-solid bg-gray-50_01">
                 <Text size="md" as="p" className="w-[94%] !text-gray-900">
@@ -58,16 +65,22 @@ export default function AboutusPage() {
                 </Text>
               </div>
             </div>
-            <div className="shadow-sm">
+            <div className="shadow-sm mb-[180px]">
               <div className="flex justify-between items-center gap-5 p-4 rounded-tl rounded-tr border-gray-300 border border-solid bg-gray-50_01">
                 <Heading size="s" as="h3" className="ml-4 md:ml-0">
                   Mission
                 </Heading>
-                <Img
-                  src="images/img_uil_edit_teal_900.svg"
-                  alt="uiledit_five"
-                  className="h-[24px] w-[24px] mr-4 md:mr-0"
-                />
+                <div className="flex items-center">
+                  <Img
+                    src={edit}
+                    alt="uiledit_five"
+                    className="z-10 h-[24px] w-[24px] mr-[-32px] md:mr-0"
+                  />
+                  <div className="mr-[10px] w-20 h-11 pl-3 pr-4 py-2.5 bg-amber-500 rounded justify-center items-center gap-1 inline-flex">
+                    <div className="w-6 h-6 relative"></div>
+                    <div className="ml-[20px] text-stone-50 text-base font-bold font-['Helvetica']">Edit</div>
+                  </div>
+                </div>
               </div>
               <div className="flex justify-center p-[31px] sm:p-5 rounded-bl rounded-br border-gray-300 border-l border-b border-r border-solid bg-gray-50_01">
                 <Text size="md" as="p" className="w-[94%] !text-gray-900">
