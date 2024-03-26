@@ -12,6 +12,10 @@ import Aboutus from "pages/Aboutus";
 import Editprofile from "pages/Editprofile";
 import AboutusEdit from "pages/AboutusEdit";
 import SecuritySettings from "pages/SecuritySettings";
+import LoadingScreen from "pages/LoadingScreen";
+import Agents from "pages/Agents";
+import Subscribers from "pages/Subscribers";
+import Viewagent from "pages/Viewagent";
 
 
 const ProjectRoutes = () => {
@@ -53,6 +57,22 @@ const ProjectRoutes = () => {
     {
       path: "admin",
       element: <Admin />,
+    },
+    {
+      path: "loadingscreen",
+      element: <LoadingScreen />,
+    },
+    {
+      path: "agents",
+      element: <Agents />,
+    },
+    {
+      path: "subscribers",
+      element: <Subscribers />,
+    },
+    {
+      path: "viewagent",
+      element: <Viewagent />,
     },
   ]);
 

@@ -9,7 +9,7 @@ export default function FAQsPage() {
   return (
     <>
       <Helmet>
-        <title>Real State</title>
+        <title>1568 Realty</title>
         <meta name="description" content="Web site created using create-react-app" />
       </Helmet>
       <div className="flex md:flex-col items-start w-full h-[0px] pr-14 gap-6 md:pr-5 bg-gray-100_01">
