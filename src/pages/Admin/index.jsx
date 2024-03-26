@@ -95,7 +95,7 @@ export default function AdminPage() {
   return (
     <>
       <Helmet>
-        <title>Bryan's Application1</title>
+        <title>1568 Realstate</title>
         <meta name="description" content="Web site created using create-react-app" />
       </Helmet>
       <div className="flex md:flex-col items-start w-full gap-6 bg-gray-100">
