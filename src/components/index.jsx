@@ -6,4 +6,7 @@ import { CheckBox } from "./CheckBox";
 import { Button } from "./Button";
 import { ReactTable } from "./ReactTable";
 import { SelectBox } from "./SelectBox";
+export { GoogleMap } from './GoogleMap';
+export { TextArea } from './TextArea';
+
 export { Img, Text, Heading, Input, CheckBox, Button, ReactTable, SelectBox };
