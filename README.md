@@ -14,7 +14,8 @@
 
 1. `cd YOUR_APPLICATION`
 2. `npm install`
-3. `npm start`
+3. npm install @googlemaps/react-wrapper
+4. `npm start`
 
 ## .env file
 

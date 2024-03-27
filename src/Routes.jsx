@@ -16,6 +16,11 @@ import LoadingScreen from "pages/LoadingScreen";
 import Agents from "pages/Agents";
 import Subscribers from "pages/Subscribers";
 import Viewagent from "pages/Viewagent";
+import MissionEdit from "pages/MissionEdit";
+import Propertytypes from "pages/Propertytypes";
+import EditdetailsOne from "pages/EditdetailsOne";
+import ViewDetails from "pages/ViewDetails";
+import EditDetails from "pages/EditDetails";
 
 
 const ProjectRoutes = () => {
@@ -73,6 +78,26 @@ const ProjectRoutes = () => {
     {
       path: "viewagent",
       element: <Viewagent />,
+    },
+    {
+      path: "missionedit",
+      element: <MissionEdit />,
+    },
+    {
+      path: "propertytypes",
+      element: <Propertytypes />,
+    },
+    {
+      path: "editdetailsone",
+      element: <EditdetailsOne />,
+    },
+    {
+      path: "viewdetails",
+      element: <ViewDetails />,
+    },
+    {
+      path: "editdetails",
+      element: <EditDetails />,
     },
   ]);
 
