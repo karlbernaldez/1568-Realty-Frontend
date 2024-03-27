@@ -27,7 +27,7 @@ export default function FAQsPage() {
               </div>
               <div className="flex">
                 <div className="flex flex-col">
-                  <Text size="md" as="p" className="!text-gray-500_01">
+                  <Text size="sm" as="p" className="!text-gray-500_01 ml-1">
                     View and manage frequently asked questions
                   </Text>
                 </div>

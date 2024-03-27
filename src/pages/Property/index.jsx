@@ -8,6 +8,7 @@ import { createColumnHelper } from "@tanstack/react-table";
 import { MenuItem, SubMenu, Menu, Sidebar } from "react-pro-sidebar";
 import SidebarContent from "../../components/Sidebar.jsx";
 import { useState } from 'react';
+import AddProperty from '../../../src/components/AddProperty'
 
 const status = [
   { label: "All status", value: "all" },
@@ -89,6 +90,17 @@ const table1Data = [
 ];
 
 export default function PropertyPage() {
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   const [activeDropdown, setActiveDropdown] = useState(false);
     
     const toggleDropdown = (index) => {
@@ -268,9 +280,12 @@ export default function PropertyPage() {
               }
               className="w-[27%] md:w-full gap-[35px] sm:px-5 border"
             />
-            <Button shape="round" leftIcon={<Img src="images/img_memoryplus.svg" alt="memory:plus" />} className="w-full gap-2 font-bold flex-1">
+            <Button shape="round" leftIcon={<Img src="images/img_memoryplus.svg" alt="memory:plus" />} className="w-full gap-2 font-bold flex-1" onClick={handleOpenModal}>
               <span className="text-xs md:text-sm lg:text-base ml-[-5px]">Add Property</span>
             </Button>
+            <AddProperty isOpen={isModalOpen} onClose={handleCloseModal}>
+              {/* Modal content goes here */}
+            </AddProperty>
           </div>
           <ReactTable
             size="md"

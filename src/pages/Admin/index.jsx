@@ -101,8 +101,8 @@ export default function AdminPage() {
       <div className="flex md:flex-col items-start w-full gap-6 bg-gray-100">
         <Sidebar className="flex flex-col w-[311px] h-screen gap-10 top-0 p-6 md:p-5 bg-white-A700 shadow-xs !sticky overflow-auto md:hidden" />
         <div className="flex flex-col w-[71%] md:w-full mt-[59px] gap-[31px] md:p-5 ml-[350px]">
-          <div className="flex flex-col self-center gap-[5px]">
-            <Heading size="lg" as="h1">
+          <div className="flex flex-col gap-[5px]">
+            <Heading size="xl" as="h1">
               <span className="text-gray-900">Users /&nbsp;</span>
               <span className="text-teal-900">Admin</span>
             </Heading>
