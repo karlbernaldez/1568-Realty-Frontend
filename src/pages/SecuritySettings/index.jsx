@@ -1,15 +1,10 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Button, Input, Text, Img, Heading } from "../../components";
 import Sidebar from "../../components/Sidebar";
 
 export default function SecuritySettingsPage() {
   return (
     <>
-      <Helmet>
-        <title>Bryan's Application1</title>
-        <meta name="description" content="Web site created using create-react-app" />
-      </Helmet>
       <div className="flex md:flex-col items-start w-full gap-8 bg-gray-100">
         <Sidebar className="flex flex-col w-[311px] h-screen gap-10 top-0 py-12 md:py-5 bg-white-A700 shadow-xs !sticky overflow-auto" />
         <div className="flex w-[71%] md:w-full mt-[59px] md:p-5">
