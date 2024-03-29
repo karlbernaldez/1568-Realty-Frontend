@@ -9,10 +9,7 @@ export default function SubscribersPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Bryan's Application1</title>
-        <meta name="description" content="Web site created using create-react-app" />
-      </Helmet>
+    
       <div className="flex md:flex-col items-start w-full gap-6 bg-gray-100">
         <Sidebar className="flex flex-col w-[311px] h-screen gap-10 top-0 p-6 md:p-5 bg-white-A700 shadow-xs !sticky overflow-auto md:hidden" />
         <div className="flex flex-col items-start w-[71%] md:w-full mt-[59px] gap-[30px] md:p-5 ml-[350px]">
