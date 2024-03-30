@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Img, Text, Button, Heading } from "../../components";
 import FAQsFooter from "../../components/FAQsFooter";
 import { MenuItem, SubMenu, Menu } from "react-pro-sidebar";
@@ -8,10 +7,6 @@ import SidebarContent from "../../components/Sidebar.jsx";
 export default function FAQsPage() {
   return (
     <>
-      <Helmet>
-        <title>1568 Realty</title>
-        <meta name="description" content="Web site created using create-react-app" />
-      </Helmet>
       <div className="flex md:flex-col items-start w-full h-[0px] pr-14 gap-6 md:pr-5 bg-gray-100_01">
         <SidebarContent/>
         <div className="flex flex-col mt-[60px] gap-8 flex-1 ml-[350px]">
