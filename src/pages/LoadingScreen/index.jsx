@@ -1,15 +1,10 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Img, Heading, Text } from "../../components";
 import { MenuItem, SubMenu, Menu, Sidebar } from "react-pro-sidebar";
 
 export default function LoadingScreenPage() {
   return (
     <>
-      <Helmet>
-        <title>Bryan's Application1</title>
-        <meta name="description" content="Web site created using create-react-app" />
-      </Helmet>
       <div className="flex sm:flex-col justify-between items-start w-full pr-[436px] gap-5 md:pr-5 bg-gray-100">
         <Sidebar
           width="311px !important"
