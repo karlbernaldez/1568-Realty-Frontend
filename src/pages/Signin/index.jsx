@@ -1,16 +1,9 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Img, Text, Button, CheckBox, Input, Heading } from "../../components";
-import { useRoutes } from "react-router-dom";
-import axios from "axios";
 
 export default function SigninPage() {
   return (
     <>
-      <Helmet>
-        <title>Real State</title>
-        <meta name="description" content="Web site created using create-react-app" />
-      </Helmet>
       <div className="w-full pl-[127px] md:pl-5 bg-white-A700 h-screen">
         <div className="flex md:flex-col justify-between items-center w-full gap-5 mx-auto max-w-[1153px]">
           <div className="flex flex-col justify-center w-[43%] md:w-full gap-[23px] p-0 md:p-5 bg-white-A700 rounded-[21px]">
