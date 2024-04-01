@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Text, Img, Heading } from "../../components";
 import Sidebar from "../../components/Sidebar.jsx";
 import edit from "../../assets/images/bx_edit.svg";
@@ -7,10 +6,6 @@ import edit from "../../assets/images/bx_edit.svg";
 export default function AboutusPage() {
   return (
     <>
-      <Helmet>
-        <title>1568 Realty</title>
-        <meta name="description" content="Web site created using create-react-app" />
-      </Helmet>
       <div className="flex md:flex-col items-start w-full gap-[26px] bg-gray-100">
         <Sidebar className="flex flex-col w-[311px] h-screen gap-10 top-0 p-6 sm:p-5 bg-white-A700 shadow-xs !sticky overflow-auto" />
         <div className="flex flex-col w-[71%] md:w-full mt-[60px] gap-10 md:p-5 ml-[350px]">
