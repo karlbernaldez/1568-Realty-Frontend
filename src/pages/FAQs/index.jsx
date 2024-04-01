@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Img, Text, Button, Heading } from "../../components";
 import FAQsFooter from "../../components/FAQsFooter";
-import { MenuItem, SubMenu, Menu } from "react-pro-sidebar";
 import SidebarContent from "../../components/Sidebar.jsx";
 
 export default function FAQsPage() {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
   return (
     <>
       <div className="flex md:flex-col items-start w-full h-[0px] pr-14 gap-6 md:pr-5 bg-gray-100_01">
-        <SidebarContent/>
+        <SidebarContent />
         <div className="flex flex-col mt-[60px] gap-8 flex-1 ml-[350px]">
           <div className="flex ml-[9px] md:ml-0">
             <div className="flex flex-col items-start gap-[3px]">
@@ -22,7 +41,7 @@ export default function FAQsPage() {
               </div>
               <div className="flex">
                 <div className="flex flex-col">
-                  <Text size="sm" as="p" className="!text-gray-500_01 ml-1">
+                  <Text size="md" as="p" className="!text-gray-500_01">
                     View and manage frequently asked questions
                   </Text>
                 </div>
@@ -72,7 +91,7 @@ export default function FAQsPage() {
                   Action
                 </Text>
               </div>
-              <div className="flex flex-col gap-px rounded-bl-lg rounded-br-lg border-gray-300_01 border-l border-r border-solid bg-white-A700">
+              <div ref={dropdownRef} className="flex flex-col gap-px rounded-bl-lg rounded-br-lg border-gray-300_01 border-l border-r border-solid bg-white-A700">
                 <div className="flex sm:flex-col justify-between items-center gap-2 p-[23px] md:p-5 border-gray-300_01 border-b border-solid flex-1">
                   <Text as="p" className="ml-1 md:ml-0">
                     1
@@ -83,43 +102,21 @@ export default function FAQsPage() {
                   <Text as="p" className="w-[27%] sm:w-full !text-gray-900">
                     Simply contact us through our website or give us...
                   </Text>
-                  <Img src="images/img_dropdown.svg" alt="image" className="h-[32px] w-[32px]" />
-                </div>
-                <div className="flex sm:flex-col justify-between items-center gap-5 p-[23px] md:p-5 border-gray-300_01 border-b border-solid flex-1">
-                  <Text as="p" className="ml-1 md:ml-0">
-                    2
-                  </Text>
-                  <Text as="p" className="w-[27%] sm:w-full !text-gray-900">
-                    How do I schedule a consultation or property viewing?
-                  </Text>
-                  <Text as="p" className="w-[27%] sm:w-full !text-gray-900">
-                    Simply contact us through our website or give us...
-                  </Text>
-                  <Img src="images/img_dropdown.svg" alt="dropdown_one" className="h-[32px] w-[32px]" />
-                </div>
-                <div className="flex sm:flex-col justify-between items-center gap-5 p-[23px] md:p-5 border-gray-300_01 border-b border-solid flex-1">
-                  <Text as="p" className="ml-1 md:ml-0">
-                    3
-                  </Text>
-                  <Text as="p" className="w-[27%] sm:w-full !text-gray-900">
-                    How do I schedule a consultation or property viewing?
-                  </Text>
-                  <Text as="p" className="w-[27%] sm:w-full !text-gray-900">
-                    Simply contact us through our website or give us...
-                  </Text>
-                  <Img src="images/img_dropdown.svg" alt="dropdown_one" className="h-[32px] w-[32px]" />
-                </div>
-                <div className="flex sm:flex-col justify-between items-center gap-5 p-[23px] md:p-5 border-gray-300_01 border-b border-solid flex-1">
-                  <Text as="p" className="ml-1 md:ml-0">
-                    4
-                  </Text>
-                  <Text as="p" className="w-[27%] sm:w-full !text-gray-900">
-                    How do I schedule a consultation or property viewing?
-                  </Text>
-                  <Text as="p" className="w-[27%] sm:w-full !text-gray-900">
-                    Simply contact us through our website or give us...
-                  </Text>
-                  <Img src="images/img_dropdown.svg" alt="dropdown_one" className="h-[32px] w-[32px]" />
+                  <div className="relative">
+                    <button onClick={toggleDropdown}>
+                      <Img src="images/img_dropdown.svg" alt="dropdown_one" className="h-[32px] w-[32px]" />
+                    </button>
+                    {dropdownVisible && (
+                      <div className="absolute right-0 mt-2 py-2 w-48 border border-solid border-gray-300 rounded-md shadow-lg">
+                        <button className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-green-500 hover:border-green-500 w-full text-left border-gray-300 focus:outline-none">
+                          Edit
+                        </button>
+                        <button className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-green-500 hover:border-green-500 w-full text-left border-gray-300 focus:outline-none">
+                          Delete
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
